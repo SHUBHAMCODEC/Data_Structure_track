@@ -20,7 +20,7 @@ public class startingPointCycle {
             temp.next=newNode;
             temp=temp.next;
         }
-        // 
+        // below line will decide what will be the starting point of cycle;
         temp.next=head.next;
 
     }
