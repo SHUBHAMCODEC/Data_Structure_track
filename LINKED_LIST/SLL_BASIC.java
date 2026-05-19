@@ -126,6 +126,8 @@ class SLL_BASIC{
         System.out.println("Value found on index: "+ cnt);
 
     }
+
+    //main function for this code
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
         while(true){

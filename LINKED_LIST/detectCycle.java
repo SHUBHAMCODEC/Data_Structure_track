@@ -16,6 +16,9 @@ public class detectCycle {
             temp.next=newNode;
             temp=temp.next;
         }
+
+        //below line will decide in this code wheather the list will containe cycle or not.
+
          //temp.next=head; //Un-comment this line if you want to test a real circular cycle:
 
     }

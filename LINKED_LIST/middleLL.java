@@ -34,7 +34,7 @@
         return low;
     }
 
-   
+   //main function for this code
     public static void main(String[] args){
         creation(new int[]{10,45,78,55,66,105});
         System.out.println(middle().data);
