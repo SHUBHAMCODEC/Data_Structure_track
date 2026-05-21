@@ -66,7 +66,7 @@ public class mergeTwoLL {
         System.out.print("Null");
         System.out.println();
     }
-
+    // main function for run
     public static void main(String[] args){
         Node list1=creation(new int[]{1,4,5,7,9,11,13,15,19,25,35,49,50});
         Node list2=creation(new int[]{2,4,6,8,10,14,18,28,38,46,72});
