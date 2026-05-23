@@ -90,7 +90,25 @@ class doublyLL{
 
     // Main function
     public static void main(String[] args){
+        insertionAtBack(10);
+        insertionAtBack(20);
+        insertionAtBack(30);
+        insertionAtBack(40);
+        display(head);
+        insertionAtbegin(70);
+        insertionAtbegin(90);
+        insertionAtbegin(100);
+        display(head);
 
+
+        deletion(40);
+        display(head);
+        insertionAtBack(900);
+        display(head);
+        deletion(900);
+        display(head);
+
+        
     }
 
 
