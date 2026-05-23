@@ -14,6 +14,8 @@ class doublyLL{
     }
 
     static Node head=null;
+
+    //function for insertion at back of doubly linkedlist
     private static Node insertionAtBack(int data){
         Node newNode=new Node(data);
 
@@ -35,7 +37,7 @@ class doublyLL{
 
         return head;
     }
-
+// function for insertion at front of doubly linkedlist
     private static void insertionAtbegin(int data){
         Node newNode=new Node(data);
         if(head==null){
@@ -51,7 +53,7 @@ class doublyLL{
         temp.next=head;
         head=temp;
     }
-
+// function fro deleting any target node  from Doubly linkedlist
     private static void deletion(int val){
         if(head==null || head.next==null){
             System.out.println("null");
@@ -70,7 +72,7 @@ class doublyLL{
     }
 
 
-
+// function for display the doubly Linkedlist
     private static void display(Node head){
         Node temp=head;
 
@@ -84,6 +86,9 @@ class doublyLL{
         System.out.println(); System.out.println();
 
     }
+
+
+    // Main function
     public static void main(String[] args){
 
     }
