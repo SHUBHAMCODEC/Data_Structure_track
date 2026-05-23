@@ -21,19 +21,20 @@ class doublyLL{
 
         if(head==null){
             head=newNode;
+            return head;
         }
 
 
-        Node temp=null; Node temp2=head;
+        Node temp=head; 
 
-        while(temp2.next!=null){
-            temp=temp2;
-            temp2=temp2.next;
+        while(temp.next!=null){
+          
+            temp=temp.next;
         }
 
-        temp2.next=newNode;
-        temp2=temp2.next;
-        temp2.prev=temp;
+        temp.next=newNode;
+        newNode.prev=temp;
+     
 
         return head;
     }
@@ -42,33 +43,48 @@ class doublyLL{
         Node newNode=new Node(data);
         if(head==null){
             head=newNode;
+            return;
         }
 
-        Node temp=head;
-        while(temp.prev!=null){
-            temp=temp.prev;
-        }
-        temp.prev=newNode;
-        temp=temp.prev;
-        temp.next=head;
-        head=temp;
+        newNode.next=head;
+        head.prev=newNode;
+        head=newNode;
     }
 // function fro deleting any target node  from Doubly linkedlist
     private static void deletion(int val){
         if(head==null || head.next==null){
             System.out.println("null");
+            return;
         }
-        Node temp=head; Node temp2=null;
+        Node temp=head; 
 
-        while(temp.data!=val){
-            temp2=temp;
-            temp=temp.next;
-        }
-        
-        if(temp==null){
-            System.out.println("value already deleted");
-        }
-        temp2.next=temp.next;
+        // Case 1: Head node holds the value
+        if (temp.data == val) { 
+            head = temp.next; 
+            if (head != null) { 
+                head.prev = null; 
+            } 
+            return; 
+        } 
+
+         // Search for the value
+        while (temp != null && temp.data != val) { 
+            temp = temp.next; 
+        } 
+
+        // Case 2: Value not found
+        if (temp == null) { 
+            System.out.println("Value not found in the list"); 
+            return; 
+        } 
+
+         // Case 3: Node to be deleted is in the middle or end
+        if (temp.next != null) { 
+            temp.next.prev = temp.prev; 
+        } 
+        if (temp.prev != null) { 
+            temp.prev.next = temp.next; 
+        } 
     }
 
 
@@ -108,7 +124,7 @@ class doublyLL{
         deletion(900);
         display(head);
 
-        
+
     }
 
 
