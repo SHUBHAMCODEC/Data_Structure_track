@@ -3,20 +3,19 @@ import java.util.*;
 public class bitBasic {
 
 
-    private static void decToBinary(int n){
-        ArrayList<Integer> list=new ArrayList<>();
-
-        while(n>0){
-            int remain=n%2;
-            list.add(remain);
-            n=n/2;
-        }
-
-        System.out.println("decimal: "+list.reversed());
+private static void decToBinary(int n) {
+        // Uses Java's built-in bitwise converter
+        System.out.println("Binary string: " + Integer.toBinaryString(n));
     }
 
-    private 
-    public static void main(String[] args){
+    private static void binToDecimal(String binStr) {
+        // Uses bitwise parsing base 2
+        int number = Integer.parseInt(binStr, 2);
+        System.out.println("NUMBER in decimal: " + number);
+    }
 
+    public static void main(String[] args) {
+        decToBinary(69);
+        binToDecimal("1000101"); // 69 in binary
     }
 }
