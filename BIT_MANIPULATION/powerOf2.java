@@ -9,6 +9,7 @@ public class powerOf2 {
         }
         System.out.println("false");
     }
+    //main function to run the code or i can say the method which is essential for running any program
     public static void main(String[] args){
         helper(16);
         helper(8);
