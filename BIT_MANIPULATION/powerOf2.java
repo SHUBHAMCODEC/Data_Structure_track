@@ -2,6 +2,7 @@ package BIT_MANIPULATION;
 
 public class powerOf2 {
 
+    //helper function for finding wheather a num is of power of 2 or not
     private static void helper(long num){
         if(num > 0 && (num & (num - 1)) == 0){
             System.out.println("true");
