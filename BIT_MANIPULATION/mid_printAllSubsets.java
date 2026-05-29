@@ -6,34 +6,22 @@ import java.util.List;
 public class mid_printAllSubsets {
 
     public static List<List<Integer>> getPowerSet(int[] nums) {
-        // Get the size of the input array
-        int n = nums.length;
+        int n=nums.length;
+        int subsets=1<<n;
 
-        // Calculate the total number of subsets (2^n)
-        int subsets = 1 << n;
+        List<List<Integer>> subset=new ArrayList<>();
 
-        // List to store all subsets
-        List<List<Integer>> ans = new ArrayList<>();
-
-        // Iterate through all numbers from 0 to 2^n - 1
-        for (int num = 0; num < subsets; num++) {
-            // Temporary list to hold current subset
-            List<Integer> subset = new ArrayList<>();
-
-            // Iterate through each bit of the number
-            for (int i = 0; i < n; i++) {
-                // If ith bit is set, include nums[i] in the subset
-                if ((num & (1 << i)) != 0) {
-                    subset.add(nums[i]);
+        for(int num=0;num<subsets;num++){
+            List<Integer>set=new ArrayList<>();
+            for(int i=0;i<n;i++){
+                if((num&(1<<i))!=0){
+                    set.add(nums[i]);
                 }
             }
-
-            // Add this subset into the final result
-            ans.add(subset);
+            subset.add(set);
         }
 
-        // Return all subsets
-        return ans;
+        return subset;
     }
     public static void main(String[] args){
         int[] nums = {5, 7, 8};
