@@ -23,6 +23,6 @@ public class mid_single_element3 {
         System.out.println(bucket1+" and "+bucket2);
     }
     public static void main(String[] args){
-        helper(new int[]{1, 2, 1, 3, 5, 2});
+        helper(new int[]{1, 2, 1, 3, 5, 2});// comments
     }
 }

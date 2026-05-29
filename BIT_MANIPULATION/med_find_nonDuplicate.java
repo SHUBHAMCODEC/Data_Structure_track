@@ -15,7 +15,7 @@ public class med_find_nonDuplicate {
 
     public static void main(String[] args){
         helper(new int[]{2,2,1});
-        helper(new int[]{1,1,4,4,5,5,6});
+        helper(new int[]{1,1,4,4,5,5,6});//comments
         
     }
 }

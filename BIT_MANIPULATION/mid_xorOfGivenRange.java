@@ -19,7 +19,7 @@ public class mid_xorOfGivenRange {
     }
 
     public static void main(String[] args){
-        range(3, 5);
+        range(3, 5);//comments
         range(1, 3);
     }
 }

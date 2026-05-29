@@ -5,7 +5,7 @@ import java.util.List;
 
 public class mid_printAllSubsets {
 
-    public static List<List<Integer>> getPowerSet(int[] nums) {
+    public static List<List<Integer>> getPowerSet(int[] nums) {//comments
         int n=nums.length;
         int subsets=1<<n;
 
