@@ -15,7 +15,7 @@ public class basic {
         recur(); // recursive call
     }
 
-    private static int recurFibonacci(int n) {
+    private static int recurFibonacci(int n) { // recursive function for fibonacci
         // Base conditions
         if (n == 0) {
             return 0;
@@ -30,7 +30,7 @@ public class basic {
     public static void main(String[] args){
         recur();
 
-         int n = 6; // Change this to find a different Fibonacci number
+        int n = 6; // Change this to find a different Fibonacci number
         System.out.println("The " + n + "th Fibonacci number is: " + recurFibonacci(n));
     }
 }
