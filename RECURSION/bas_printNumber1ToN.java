@@ -5,35 +5,34 @@ import java.util.Scanner;
 public class bas_printNumber1ToN {
 
 
-    static int s;
-    static int n=0;
-    private static void recur(){
-        if(n==s){
+    //without global variables
+    private static void recur(int i,int n){
+        if(i>n){
             return;
         }
 
         System.out.println(n);
-        n++;
-        recur();
+       
+        recur(i+1,n);
     }
-    private static void reverse(){
-        if(s==-1){
+    private static void reverse(int c,int s){
+        if(s<1){
             return;
         }
         System.out.println(s);
-        s--;
-        reverse();
+        
+        reverse(c,s-1);
     }
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the value of n");
-        s=sc.nextInt();
+        int s=sc.nextInt();
         System.out.println("Start from here:-");
-        recur();
+        recur(1,s);
         System.out.println("------------------------------------------------------------");
         System.out.println("In reverse:");
-        reverse();
-
+        reverse(0,s);
+        
 
     }
 }
