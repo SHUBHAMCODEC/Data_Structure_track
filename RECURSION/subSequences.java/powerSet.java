@@ -25,7 +25,7 @@ public class powerSet {
         backtrack(str, index + 1, current + str.charAt(index), result);
     }
 
-    public static void main(String [] args){
+    public static void main(String [] args){ // main method for running the system
 
 
         generatePowerSet("abc");
