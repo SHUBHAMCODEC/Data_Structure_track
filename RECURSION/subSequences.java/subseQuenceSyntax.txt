@@ -1,0 +1,19 @@
+basic structure for priinting the subsequence via recursion is :
+
+we are going to follow " PICK or NOT PICK " rule: says that either we will take the element or we will not the element.
+
+1. current can be a empty string if we have to find out the subsequence of characters.
+OR we can any integer array for int elements.MAin thing is we have to place such thing in which w ehave to store the elements.
+
+void recur(int index, current){
+    if(index==n)  or we can use (index==0)-> in reverse{
+        return current;
+    }
+
+    // we will take the element
+    recur(index+1,current.add[index's position element]);
+
+    // we will not take element
+    recur(index+1,current);
+
+}
