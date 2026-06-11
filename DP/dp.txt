@@ -1,0 +1,3 @@
+
+
+if we are storing a data into the array and then we retrive while recursive call , known as MEMOIZATION.
