@@ -67,12 +67,29 @@ public class basic {
 
 
     public static void main(String[] args) {
-        Node root=new Node(3);
-        root.left=new Node(2);
-        root.right=new Node(1);
-        root.left.right=new Node(4);
-        root.left.left=new Node(10);
-        root.left.left.right=new Node(14);
+        // Your original nodes
+        Node root = new Node(3); 
+        root.left = new Node(2); 
+        root.right = new Node(1); 
+        root.left.right = new Node(4); 
+        root.left.left = new Node(10); 
+        root.left.left.right = new Node(14); 
+
+        // --- New nodes added below to expand the tree ---
+
+        // Populating the right side of the root (under node 1)
+        root.right.left = new Node(7);
+        root.right.right = new Node(9);
+
+        // Expanding the left side further (under nodes 4 and 14)
+        root.left.right.left = new Node(5);
+        root.left.right.right = new Node(8);
+        root.left.left.left = new Node(11);
+
+        // Deepest level additions (under nodes 7 and 9)
+        root.right.left.left = new Node(12);
+        root.right.right.right = new Node(15);
+
         System.out.println(countNodes(root));
 
     }
